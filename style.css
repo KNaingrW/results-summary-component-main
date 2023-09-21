@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto;  
+    box-sizing: border-box;
+    background-color: #f0f0f0; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    background: linear-gradient(180deg,hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+  }
+  .right h3{
+    color: #ccc;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+  }
+  .numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .numbers p {
+    font-size: 18px;
+    color: #ccc;
+    text-align: center;
+    margin: 0;
+  }
+  .numbers p span{
+    display: block;
+    font-size: 34px;
+    color: #FFFFFF;
+  }
+  .text{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 250px;
+  }
+  .text h2{
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .text p{
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+  .left{
+    flex-basis: 48%;
+  }
+  .left h3{
+    margin-top: 7px;
+  } 
+  .performance{
+     display: block;
+     flex-wrap: wrap;
+     gap: 20px;
+     padding-top: 20px;
+     max-width: 360px;
+  }
+  .performance p{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 10px 10px 0px;
+  }
+  .performance p b{
+    font-weight: 800;
+    color: #000;
+  }
+  .performance p span{
+    color: #ccc;
+  }
+  .performance p:first-child{
+    display: flex;
+    font-size: 18px;
+    color: var(--light-red);
+    background: rgba(255, 87, 87, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .performance p b:first-of-type {
+    margin-left: 185px;
+  }
+  .performance p:nth-child(2) {
+    display: flex;
+    font-size: 18px;
+    color: var(--orangey-yellow);
+    background: rgba(255, 176, 31, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .performance p:nth-child(3){
+    display: flex;
+    font-size: 18px;
+    color: var(--green-teal);
+    background: rgba(0, 189, 145, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .performance p:nth-child(4){
+    display: flex;
+    font-size: 18px;
+    color: var(--cobalt-blue);
+    background: rgba(17, 37, 212, 0.1);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .performance p img{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .performance button {
+    display: block;
+    margin: 0 auto;
+    background: hsl(224, 30%, 27%);
+    color: #FFFFFF;
+    padding: 12px 100px 12px 100px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  /*---------- media query for smaller device -----------*/
+  @media(max-width: 600px){
+    .container{
+        flex-direction: column;
+        align-self: center;
+    }
+    .right, .left{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .left{
+        margin-top: 10px;
+    }
+    .performance{
+        max-width: 300px;
+    }
+    .performance p b:first-of-type {
+        margin-left: 115px;
+    }
+    .performance p .b3 {
+        margin-left: 125px !important;
+    }
+    .performance p .b4 {
+    margin-left: 125px !important;
+   }
+   .numbers p {
+    font-size: 15px; 
+  }
+  .text h2 {
+    font-size: 25px; 
+  }
+  .text p {
+    font-size: 14px;   
+  }
+  
+  }
